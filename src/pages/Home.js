@@ -1,37 +1,32 @@
 import React from "react";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import NavbarComponent from "../components/Navbarcomponent/NavbarComponent";
+import Footer from "../components/Footer";
+import SplitTextAnimation from "../components/SplitTextAnimation/SplitTextAnimation";
+import { Button, Container } from "react-bootstrap";
+import styles from "./Home.module.css";
 
-function Home() {
+const Home = () => {
   return (
-    <>
+    <div className={styles.homeContainer}>
       {/* Navbar */}
-      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-        <Container>
-          <Navbar.Brand href="/">Poomani Decors</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/services">Services</Nav.Link>
-              <Nav.Link href="/gallery">Gallery</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <NavbarComponent />
 
       {/* Hero Section */}
-      <div className="bg-dark text-white text-center d-flex align-items-center justify-content-center" style={{ height: "90vh" }}>
-        <div>
-          <h1 className="display-3 fw-bold">Welcome to Poomani Decors</h1>
-          <p className="lead">Crafting grand wedding decorations with elegance and style</p>
-          <Button variant="warning" size="lg" href="/services">
-            Explore Services
-          </Button>
-        </div>
-      </div>
-    </>
+      <Container className="text-center flex-grow-1 d-flex flex-column justify-content-center">
+        <SplitTextAnimation leftText="Welcome to" rightText="Poomani Decors" />
+        <p className={styles.tagline}>Crafting grand wedding decorations with elegance and style</p>
+        <Button
+          className={styles.exploreButton}
+          variant="primary"
+        >
+          Explore Services
+        </Button>
+      </Container>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
-}
+};
 
 export default Home;
