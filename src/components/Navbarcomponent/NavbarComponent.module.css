@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.navbar {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.brandText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #ccd5ae;
+  font-size: 1.5rem;
+}
+
+.navLink {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #333 !important;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.navLink:hover {
+  text-shadow: 0 0 10px blue, 0 0 20px red, 0 0 30px blue;
+}
