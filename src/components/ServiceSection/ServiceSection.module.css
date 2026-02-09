@@ -1,0 +1,114 @@
+/* src/components/GallerySection/GallerySection.module.css */
+
+.gallerySection {
+  position: relative;
+  padding: 140px 20px;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(20,10,30,0.75));
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: #ffffff;
+  margin-bottom: 80px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.swiper {
+  padding-bottom: 60px !important;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 28px;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(216, 184, 116, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+.imageWrapper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.card:hover .galleryImage {
+  transform: scale(1.12);
+}
+
+.cardContent {
+  flex: 1;
+  /* padding: 32px 28px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  margin-bottom: 14px;
+  color: #d8b874;
+  font-weight: 700;
+}
+
+.cardDesc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+:global(.swiper-pagination-bullet) {
+  background: rgba(255,255,255,0.5);
+  width: 12px;
+  height: 12px;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #d8b874;
+  transform: scale(1.4);
+}
